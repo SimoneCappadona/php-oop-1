@@ -1,10 +1,11 @@
+<?php
+require_once __DIR__ . "/data.php";
 
-
-
+?>
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,28 +23,24 @@
 
 <body>
     <div class="container">
-        <div class="card mt-5">
-            <?php  ?>
-                <div class="card-header text-info fw-bold h1">
-                    
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="fw-medium text-info-emphasis list-group-item">
-                            
-                        </li>
-                    <li class="fw-medium text-info-emphasis list-group-item">
-                        
-                    </li>
-                    <li class="fw-medium text-info-emphasis list-group-item">
-                        
-                    </li>
-                    <li class="fw-medium text-info-emphasis list-group-item">
-                        
-                    </li>
-                </ul>
-
-            <?php ?>
-        </div>
+    <table class="table">
+        <thead >
+            <th>Title</th>
+            <th>Type</th>
+            <th>Language</th>
+            <th>Vote</th>
+        </thead>
+        <tbody >
+            <?php foreach ($movies as $movie): ?>
+                <tr>
+                    <td> <?= $movie->title ?> </td>
+                    <td> <?= $movie->type ?> </td>
+                    <td> <?= $movie->lang ?> </td>
+                    <td> <?= $movie->vote ?> </td>                                               
+                </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
     </div>
 </body>
 
