@@ -28,6 +28,8 @@ require_once __DIR__ . "/data.php";
             <th>Title</th>
             <th>Type</th>
             <th>Language</th>
+            <th>Season</th>
+            <th>Episodes</th>
             <th>Vote</th>
         </thead>
         <tbody >
@@ -36,6 +38,8 @@ require_once __DIR__ . "/data.php";
                     <td> <?= $movie->title ?> </td>
                     <td> <?= $movie->type ?> </td>
                     <td> <?= $movie->lang ?> </td>
+                    <td> <?= $movie->season ?> </td>
+                    <td> <?= $movie->eps ?> </td>
                     <td> <?= $movie->vote ?> </td>                                               
                 </tr>
             <?php endforeach; ?>
